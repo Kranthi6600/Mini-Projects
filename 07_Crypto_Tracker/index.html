@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Crypto Currency Tracker</h1>
+    <div id="controls-container">
+        <input type="text" id="crypto-search-input" placeholder="Search Coins">
+        <select id="currency-select"></select>
+        <button id="theme-toggle" title="Toggle Dark/Light Mode">
+            <svg class="sun-icon" viewBox='0 0 24 24'>
+                <path d="M12 2a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1zm0 16a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0
+                    0 1
+                    1-1zM3.293 3.293a1 1 0 0 1 1.414 0l1.414 1.414a1 1 0 0 1-1.414 1.414L3.293 4.707a1 1 0 0 1
+                    0-1.414zm16
+                    16a1 1 0 0 1 1.414 0l1.414 1.414a1 1 0 0 1-1.414 1.414l-1.414-1.414a1 1 0 0 1 0-1.414zM6 12a1 1 0 0
+                    1-1-1H3a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1zm16 0a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1h2a1 1 0 0
+                    1 0
+                    2h-2a1 1 0 0 1-1 1zM4.707 17.293a1 1 0 0 1 0 1.414l-1.414 1.414a1 1 0 0 1-1.414-1.414l1.414-1.414a1
+                    1 0
+                    0 1 1.414 0zm16-1.414a1 1 0 0 1 1.414 0l1.414 1.414a1 1 0 0 1-1.414 1.414l-1.414-1.414a1 1 0 0 1
+                    0-1.414zM12 6a6 6 0 1 1 0 12 6 6 0 0 1 0-12z">
+            </svg>
+        </button>
+    </div>
+
+    <div id="loading">Loading...</div>
+
+    <div id="error"></div>
+
+    <div id="no-crypto-results">No cryto currencies found.</div>
+
+    <table id="crypto-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Symbol</th>
+                <th>Price</th>
+                <th>Market Cap</th>
+                <th>24h Change (%)</th>
+            </tr>
+        </thead>
+
+        <tbody id="crypto-data"></tbody>
+
+    </table>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

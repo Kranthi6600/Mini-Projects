@@ -1,0 +1,171 @@
+:root {
+  /* Light mode: Black text on white background */
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --table-bg: #ffffff;
+  --table-shadow: rgba(0, 0, 0, 0.15);
+  --border-color: #cccccc;
+  --input-bg: #ffffff;
+  --input-border: #999999;
+  --input-focus-border: #333333;
+  --table-header-bg: #333333;
+  --table-header-text: #ffffff;
+  --table-hover-bg: #f0f0f0;
+  --error-color: #cc0000;
+  --loading-color: #666666;
+  --no-results-color: #666666;
+  --icon-color: #000000;
+}
+
+.dark-mode {
+  /* Dark mode: White text on black background */
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --table-bg: #1a1a1a;
+  --table-shadow: rgba(255, 255, 255, 0.1);
+  --border-color: #444444;
+  --input-bg: #2a2a2a;
+  --input-border: #666666;
+  --input-focus-border: #cccccc;
+  --table-header-bg: #222222;
+  --table-header-text: #ffffff;
+  --table-hover-bg: #333333;
+  --error-color: #ff5555;
+  --loading-color: #aaaaaa;
+  --no-results-color: #aaaaaa;
+  --icon-color: #ffffff;
+}
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1{
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+#controls-container{
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#crypto-search-input,
+#currency-select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid var(--input-border);
+    border-radius: 6px;
+    box-sizing: border-box;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#crypto-search-input {
+    width: 300px;
+}
+
+
+#currency-select{
+    width: 200px;
+    appearance: menulist;
+    background-color: var(--input-bg);
+    cursor: pointer;
+}
+
+#crypto-search-input:focus,
+#currency-select:focus {
+    outline: none;
+    border-color: var(--input-focus-border);
+}
+
+#theme-toggle{
+    background: none;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transition: border-color 0.3s ease;
+}
+
+#theme-toggle svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--icon-color);
+    transition: fill 0.3s ease;
+}
+
+#theme-toggle:hover{
+    background-color: var(--table-hover-bg);
+}
+
+#crypto-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: var(--table-bg);
+    box-shadow: 0 0 10px var(--table-shadow);
+    transition: background-color 0.3s ease;
+}
+
+#crypto-table th,
+#crypto-table td{
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#crypto-table th{
+    background-color: var(--table-header-bg);
+    color: var(--table-header-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#crypto-table tr:hover{
+    background-color: var(--table-hover-bg);
+    transition: background-color 0.3s ease;
+}
+
+.positive{
+    color: #00cc00;
+}
+
+.negative{
+    color: #cc0000;
+}
+
+#error{
+    color: var(--error-color);
+    text-align: center;
+    display: none;
+    transition: color 0.3s ease;
+}
+
+#loading{
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--loading-color);
+    transition: color 0.3s ease;
+}
+
+#no-crypto-results{
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--no-results-color);
+    transition: color 0.3s ease;
+}
