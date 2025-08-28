@@ -17,11 +17,12 @@ body {
   justify-content: center;
   align-items: center;
   height: 80vh;
+  transition: 0.4s;
 }
 
 .circle {
   width: 30px;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
   height: 30px;
   top: 5px;
   left: 6px;
@@ -32,11 +33,12 @@ body {
 }
 
 .input:checked+.label {
-  background-color: aqua;
+  background-color: rgb(255, 255, 255);
 }
 
 .input:checked+.label .circle {
   animation: toggleOn 0.3s linear forwards;
+  background-color: black;
 }
 
 @keyframes toggleOn {
