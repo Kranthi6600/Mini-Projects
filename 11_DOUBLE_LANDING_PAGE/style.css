@@ -1,0 +1,75 @@
+body{
+    background-color: black;
+    color: white;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h1{
+    font-size: 100px;
+    backdrop-filter: brightness(0.5);
+    letter-spacing: 5px;
+}
+
+.btn{
+    background-color: black;
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: 1s background-color;
+    white-space: nowrap;
+}
+
+.btn:hover{
+    background-color: white;
+    color: black;
+}
+.split{
+    width: 50%;
+    height: 100%;
+    top: 0;
+    overflow: hidden;
+}
+
+.split.left{
+    position: absolute;
+    left: 0;
+    background-color: rgb(76, 78, 78);
+    background-image: url("https://i.pinimg.com/736x/37/7a/ef/377aef2228b786d7a104cf5de11103bc.jpg");
+    background-size: cover;
+}
+
+.split.right{
+    position: absolute;
+    right: 0;
+    background-color: rgba(40, 51, 32, 0.753);
+    background-image: url("https://i.pinimg.com/736x/24/22/32/24223258deb2711a6cfb6ffe2ba3b5e9.jpg");
+    background-size: cover;
+}
+
+.active-left .left{
+    width: 75%;
+}
+
+.active-left .right{
+    width: 25%;
+}
+
+.active-right .left{
+    width: 25%;
+}
+
+.active-right .right{
+    width: 75%;
+}
+
+.left , .right{
+    transition: width 0.5s ease-in-out;
+}
