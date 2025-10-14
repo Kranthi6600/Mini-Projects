@@ -1,0 +1,53 @@
+body{
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.container{
+    text-align: center;
+    box-shadow: 0px 1px 18px 0px white;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 0 auto;   
+    min-width: 500px; 
+}
+
+label{
+    font-size: large;
+}
+
+#birthday{
+    padding: 3px;
+    width: 200px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    font-size: 13px;
+    padding: 10px 20px;
+    margin: 10px;
+    color: white;
+    background-color: rgb(94, 127, 164);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: opacity 0.5s;
+}
+
+button:hover{
+    opacity: .7;
+}
